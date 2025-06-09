@@ -133,7 +133,8 @@ def init_models_and_data():
         )
         
         # Load conversation dataset
-        file_path = "/usr/local/bin/Friendly_Conversation_Pie.xlsx"
+        # file_path = "/usr/local/bin/Friendly_Conversation_Pie.xlsx"
+        file_path = os.path.join(os.path.dirname(__file__), "data", "Friendly_Conversation_Pie.xlsx")
         data = pd.read_excel(file_path)
         data = data.dropna(subset=["Users", "Conversations"]).reset_index(drop=True)
         
